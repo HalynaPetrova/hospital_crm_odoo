@@ -12,4 +12,7 @@
     <menuitem id="menu_reception_schedule_hospital"
               parent="main_menu_hospital"
               name ="Reception schedule"/>
+    <menuitem id="menu_settings_hospital"
+              parent="main_menu_hospital"
+              name ="Settings"/>
 </odoo>

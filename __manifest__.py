@@ -9,6 +9,7 @@
         'views/menu_items.xml',
         'views/patient.xml',
         'views/doctor.xml',
+        'views/disease_directory.xml',
     ],
     "installable": True,
     "application": True,
