@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="main_menu_hospital"
+              name ="Hospital CRM"
+              web_icon="hospital_crm_odoo,static/description/icon_hospital.png"/>
+    <menuitem id="menu_doctor_hospital"
+              parent="main_menu_hospital"
+              name ="Doctors"/>
+    <menuitem id="menu_patient_hospital"
+              parent="main_menu_hospital"
+              name ="Patients"/>
+    <menuitem id="menu_reception_schedule_hospital"
+              parent="main_menu_hospital"
+              name ="Reception schedule"/>
+</odoo>
