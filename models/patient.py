@@ -5,14 +5,11 @@ class Patient(models.Model):
     _name = "hospital.patient"
     _description = "Patient Model"
     _inherit = "hospital.abstract.person"
+    _order = "first_name"
 
-    first_name = fields.Char(string="First Name", required=True)
-    last_name = fields.Char(string="Last Name", required=True)
     birth_date = fields.Date(string="Birth", required=True)
     age = fields.Integer(string="Age", compute="_compute_age")
     passport_data = fields.Char(string="Passport")
-    email = fields.Char(string="Email")
-    phone = fields.Char(string="Phone")
     contact_person = fields.Char(string="Contact Name")
     personal_doctor = fields.Char(string="Personal doctor")
 
