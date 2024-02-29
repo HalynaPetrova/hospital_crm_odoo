@@ -10,8 +10,8 @@ class Patient(models.Model):
     birth_date = fields.Date(string="Birth", required=True)
     age = fields.Integer(string="Age", compute="_compute_age")
     passport_data = fields.Char(string="Passport")
-    contact_person = fields.Char(string="Contact Name")
-    personal_doctor = fields.Char(string="Personal doctor")
+    contact_person = fields.Many2one("hospital.patient", string="Contact Name")
+    personal_doctor = fields.Many2one("hospital.doctor", string="Personal doctor")
 
     @api.depends("birth_date")
     def _compute_age(self):

@@ -8,6 +8,7 @@
         'security/ir.model.access.csv',
         'views/menu_items.xml',
         'views/patient.xml',
+        'views/doctor.xml',
     ],
     "installable": True,
     "application": True,

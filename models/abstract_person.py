@@ -11,7 +11,7 @@ class AbstractPerson(models.AbstractModel):
     full_name = fields.Char(string="Full name", compute="_compute_full_name")
     gender = fields.Selection([('male', 'Male'), ('female', 'Female')])
     phone = fields.Char(string="Phone")
-    mail = fields.Char(string="Email")
+    email = fields.Char(string="Email")
 
     @api.depends("first_name", "last_name")
     def _compute_full_name(self):
