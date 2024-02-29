@@ -7,6 +7,13 @@
             <tree>
                 <field name="first_name"/>
                 <field name="last_name"/>
+                <field name="birth_date"/>
+                <field name="age"/>
+                <field name="passport_data"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="contact_person"/>
+                <field name="personal_doctor"/>
             </tree>
         </field>
     </record>
@@ -21,6 +28,13 @@
                     <group>
                         <field name="first_name"/>
                         <field name="last_name"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
+                        <field name="passport_data"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="contact_person"/>
+                        <field name="personal_doctor"/>
                     </group>
                 </sheet>
             </form>

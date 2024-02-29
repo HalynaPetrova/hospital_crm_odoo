@@ -1,45 +1,36 @@
-from datetime import datetime
-
 from odoo import fields, models, api
 
 
 class Patient(models.Model):
     _name = "hospital.patient"
     _description = "Patient Model"
+    _inherit = "hospital.abstract.person"
 
     first_name = fields.Char(string="First Name", required=True)
     last_name = fields.Char(string="Last Name", required=True)
     birth_date = fields.Date(string="Birth", required=True)
     age = fields.Integer(string="Age", compute="_compute_age")
     passport_data = fields.Char(string="Passport")
-    email = fields.Char(string="Email", required=True)
+    email = fields.Char(string="Email")
     phone = fields.Char(string="Phone")
     contact_person = fields.Char(string="Contact Name")
-    personal_doctor = fields.Char(string="Personal")
+    personal_doctor = fields.Char(string="Personal doctor")
 
-    # @api.depends("birth_date")
-    # def _compute_age(self):
-    #     for rec in self:
-    #         self.age = datetime.today() - rec.birth_date.year
-    #
-    #
-    # # today = datetime.today()
-    # # age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
-    # # return age
-    # #
+    @api.depends("birth_date")
+    def _compute_age(self):
+        for person in self:
+            if person.birth_date:
+                today = fields.Date.today()
+                person.age = today.year - person.birth_date.year
+                if person.birth_date.month >= today.month and person.birth_date.day > today.day:
+                    person.age -= 1
+            else:
+                person.age = 0
 
-# # print(datetime.today())
-#
-#
-# for patient in self:
-#     if patient.birth_date:
-#         birth_date_str = patient.birth_date.strftime("%Y-%m-%d")
-#         birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d").date()
-#         today = datetime.now().date()
-#         age = (
-#                 today.year
-#                 - birth_date.year
-#                 - ((today.month, today.day) < (birth_date.month, birth_date.day))
-#         )
-#         patient.age = age
-#     else:
+    _sql_constraints = [
+        (
+            "check_unique_passport_data",
+            "UNIQUE(passport_data)",
+            "Passport data must be unique!",
+        ),
+    ]
