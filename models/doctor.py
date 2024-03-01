@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 
 class Patient(models.Model):
@@ -12,6 +12,3 @@ class Patient(models.Model):
     mentor_id = fields.Many2one(
         "hospital.doctor", string="Mentor", domain=[("is_intern", "=", False)]
     )
-
-
-
