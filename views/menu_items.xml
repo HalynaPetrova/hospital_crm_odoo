@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+
     <menuitem id="main_menu_hospital"
               name ="Hospital CRM"
               web_icon="hospital_crm_odoo,static/description/icon_hospital.png"/>
+
     <menuitem id="menu_patient_hospital"
               parent="main_menu_hospital"
+              action="hospital_patient_action_window"
               name ="Patient"/>
+
     <menuitem id="menu_doctor_hospital"
               parent="main_menu_hospital"
+              action="hospital_doctor_action_window"
               name ="Doctor"/>
-    <menuitem id="menu_reception_schedule_hospital"
-              parent="main_menu_hospital"
-              name ="Reception schedule"/>
+
     <menuitem id="menu_settings_hospital"
               parent="main_menu_hospital"
-              name ="Settings"/>
-       <menuitem id="hospital_patient_menu"
-              action="hospital_patient_action_window"
-              parent="menu_patient_hospital"
-              name="Patient"/>
+              name ="Settings">
+
+              <menuitem id="hospital_disease_type_menu"
+                        action="hospital_disease_type_action_window"
+                        name="Disease Type"/>
+
+              <menuitem id="hospital_disease_catalog_menu"
+                        action="hospital_disease_catalog_action_window"
+                        name="Disease Catalog"/>
+
+              <menuitem id="hospital_research_type_menu"
+                        action="hospital_research_type_action_window"
+                        name="Research Type"/>
+
+              <menuitem id="hospital_research_catalog_menu"
+                        action="hospital_research_catalog_action_window"
+                        name="Research Catalog"/>
+
+              <menuitem id="hospital_analysis_menu"
+                        action="hospital_analysis_action_window"
+                        name="Analysis"/>
+
+              <menuitem id="hospital_diagnosis_menu"
+                        action="hospital_diagnosis_action_window"
+                        name="Diagnosis"/>
+
+    </menuitem>
 
 </odoo>
-
-
-
-<!--         <menuitem id="menu_property_ads_settings" name="Settings">-->
-<!--            <menuitem id="menu_property_type" name="Property Types" action="real_estate_ads.action_property_type"/>-->
-<!--            <menuitem id="menu_property_tag" name="Property Tags" action="real_estate_ads.action_property_tag"/>-->
-<!--            <menuitem id="menu_property_offers" name="Offers" action="real_estate_ads.action_property_offers"/>-->
-<!--        </menuitem>-->

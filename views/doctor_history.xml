@@ -33,9 +33,6 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="hospital_doctor_history_menu"
-                  action="hospital_doctor_history_action_window"
-                  parent="menu_settings_hospital"
-                  name="Doctor History"/>
+
     </data>
 </odoo>

@@ -25,7 +25,6 @@
             </field>
         </record>
 
-
         <record id="hospital_doctor_schedule_action_window" model="ir.actions.act_window">
             <field name="name">Doctor Schedule</field>
             <field name="type">ir.actions.act_window</field>
@@ -33,9 +32,6 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="hospital_doctor_schedule_menu"
-                  action="hospital_doctor_schedule_action_window"
-                  parent="menu_settings_hospital"
-                  name="Doctor Schedule"/>
+
     </data>
 </odoo>

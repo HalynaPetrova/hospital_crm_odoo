@@ -25,7 +25,6 @@
             </field>
         </record>
 
-
         <record id="hospital_doctor_visit_action_window" model="ir.actions.act_window">
             <field name="name">Doctor Visit</field>
             <field name="type">ir.actions.act_window</field>
@@ -33,9 +32,11 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="hospital_doctor_visit_menu"
-                  action="hospital_doctor_visit_action_window"
+
+
+        <menuitem id="hospital_diagnosis_menu"
+                  action="hospital_diagnosis_action_window"
                   parent="menu_settings_hospital"
-                  name="Doctor Visit"/>
+                  name="Diagnosis"/>
     </data>
 </odoo>

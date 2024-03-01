@@ -33,9 +33,5 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="hospital_research_type_menu"
-                  action="hospital_research_type_action_window"
-                  parent="menu_settings_hospital"
-                  name="Research Type"/>
     </data>
 </odoo>
