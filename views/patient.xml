@@ -49,9 +49,4 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="hospital_patient_menu"
-              action="hospital_patient_action_window"
-              parent="menu_patient_hospital"
-              name="Patient"/>
-
 </odoo>

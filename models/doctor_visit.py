@@ -1,9 +1,9 @@
 from odoo import fields, models
 
 
-class Diagnosis(models.Model):
-    _name = "hospital.diagnosis"
-    _description = "Diagnosis"
+class DoctorVisit(models.Model):
+    _name = "hospital.doctor.visit"
+    _description = "Doctor Visit"
     _order = "name"
 
     name = fields.Char(string="Name", required=True)

@@ -15,4 +15,17 @@
     <menuitem id="menu_settings_hospital"
               parent="main_menu_hospital"
               name ="Settings"/>
+       <menuitem id="hospital_patient_menu"
+              action="hospital_patient_action_window"
+              parent="menu_patient_hospital"
+              name="Patient"/>
+
 </odoo>
+
+
+
+<!--         <menuitem id="menu_property_ads_settings" name="Settings">-->
+<!--            <menuitem id="menu_property_type" name="Property Types" action="real_estate_ads.action_property_type"/>-->
+<!--            <menuitem id="menu_property_tag" name="Property Tags" action="real_estate_ads.action_property_tag"/>-->
+<!--            <menuitem id="menu_property_offers" name="Offers" action="real_estate_ads.action_property_offers"/>-->
+<!--        </menuitem>-->

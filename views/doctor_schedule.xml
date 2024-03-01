@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="hospital_doctor_schedule_tree_view" model="ir.ui.view">
+            <field name="name">hospital.doctor.schedule.tree</field>
+            <field name="model">hospital.doctor.schedule</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hospital_doctor_schedule_form_view" model="ir.ui.view">
+            <field name="name">hospital.doctor.schedule.form</field>
+            <field name="model">hospital.doctor.schedule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="hospital_doctor_schedule_action_window" model="ir.actions.act_window">
+            <field name="name">Doctor Schedule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hospital.doctor.schedule</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="hospital_doctor_schedule_menu"
+                  action="hospital_doctor_schedule_action_window"
+                  parent="menu_settings_hospital"
+                  name="Doctor Schedule"/>
+    </data>
+</odoo>

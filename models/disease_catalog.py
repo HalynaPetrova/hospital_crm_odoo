@@ -1,9 +1,9 @@
 from odoo import fields, models
 
 
-class DiseaseDirectory(models.Model):
-    _name = "hospital.disease.directory"
-    _description = "Disease Directory"
+class DiseaseCatalog(models.Model):
+    _name = "hospital.disease.catalog"
+    _description = "Disease Catalog"
     _order = "name"
 
     name = fields.Char(string="Name", required=True)
